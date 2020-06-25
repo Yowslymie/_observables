@@ -1,0 +1,13 @@
+<div style="margin: 0 50px">
+  <p>pokemon works!</p>
+  <mat-form-field appearance="standard">
+    <mat-label>Clearable input</mat-label>
+    <input matInput type="text" [(ngModel)]="txt" (keyup)="filter()">
+    <button mat-button *ngIf="txt" matSuffix mat-icon-button aria-label="Clear" (click)="txt=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div *ngFor="let pokemon of (filterPokemonArr$ | async)">
+    {{ pokemon.name }}
+  </div>
+</div>
