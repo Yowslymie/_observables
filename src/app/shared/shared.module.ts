@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   exports:  [
   MaterialModule

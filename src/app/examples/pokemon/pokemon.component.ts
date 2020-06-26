@@ -26,7 +26,7 @@ export class PokemonComponent implements OnInit {
       map(
         (x: any) => {
           console.log('jip');
-        return x.filter(y => y.name.toLowerCase().indexOf(this.txt.toLowerCase()) !== -1);
+          return x.filter(y => y.name.toLowerCase().indexOf(this.txt.toLowerCase()) !== -1);
       })
     );
   }

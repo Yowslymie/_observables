@@ -7,9 +7,11 @@ import { MaterialModule } from '../shared/material/material.module';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { FormsModule } from '@angular/forms';
+import { TodoComponent } from './todo/todo.component';
+import { MaterialExamplesComponent } from './material-examples/material-examples.component';
 
 const exampleRoutes: Routes = [
-  { path: '',   redirectTo: 'pokemon', pathMatch: 'full'   },
+  { path: '',   redirectTo: 'material', pathMatch: 'full'   },
   {
     path: 'observable-handle-button-clicks',
     component: ObservableHandleButtonClicksComponent
@@ -22,11 +24,19 @@ const exampleRoutes: Routes = [
     path: 'pokemon',
     component: PokemonComponent
   },
+  {
+    path: 'todo',
+    component: TodoComponent
+  },
+  {
+    path: 'material',
+    component: MaterialExamplesComponent
+  },
 ];
 
 @NgModule({
-  declarations: [ObservableHandleButtonClicksComponent, HttpTestComponent, PokemonComponent],
-  exports: [ObservableHandleButtonClicksComponent,HttpTestComponent],
+  declarations: [ObservableHandleButtonClicksComponent, HttpTestComponent, PokemonComponent, TodoComponent, MaterialExamplesComponent],
+  exports: [ObservableHandleButtonClicksComponent, HttpTestComponent],
   imports: [
     CommonModule,
     FormsModule,

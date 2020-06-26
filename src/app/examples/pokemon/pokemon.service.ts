@@ -13,7 +13,7 @@ export class PokemonService {
 
 
   public getPokemon() : Observable<any> {
-    return this.http.get(this.baseUrl + '/pokemon/?limit=20&offset=20').pipe(
+    return this.http.get(this.baseUrl + '/pokemon/?limit=152').pipe(
         map((x: any) => {
           return x.results;
         })
