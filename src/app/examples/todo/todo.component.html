@@ -1,6 +1,10 @@
 <div style="margin: 0 50px">
+  <div>Voeg iets toe aan je lijstje:</div>
+
   <mat-form-field appearance="standard">
-    <mat-label>Clearable input</mat-label>
+    <mat-label>Clearable input
+      <div *ngIf="txt">Druk op enter om toe te voegen</div>
+    </mat-label>
     <input matInput type="text" placeholder="todo" #input [(ngModel)]="txt">
   </mat-form-field>
   <div *ngFor="let todo of todoItems">
